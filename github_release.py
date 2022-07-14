@@ -16,6 +16,7 @@ import types
 from functools import wraps
 from pprint import pprint
 
+import backoff
 import click
 import link_header
 import requests
@@ -319,7 +320,7 @@ def get_releases(repo_name, verbose=False):
                  sorted(releases, key=lambda r: r['tag_name'])))
     return releases
 
-
+@backoff.on_exception(backoff.expo, Exception, max_time=60)
 def get_release(repo_name, tag_name):
     releases = get_releases(repo_name)
     try:
