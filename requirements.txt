@@ -1,4 +1,4 @@
 click
 linkheader
 requests
-backoff~=2.1.2
+backoff >= 1.10.0, < 2.0.0
