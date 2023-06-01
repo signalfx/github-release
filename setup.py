@@ -30,7 +30,7 @@ setup(
     long_description=readme,
     long_description_content_type='text/markdown; charset=UTF-8',
 
-    url='https://github.com/j0057/github-release',
+    url='https://github.com/signalfx/github-release',
 
     author='Joost Molenaar, Jean-Christophe Fillion-Robin',
     author_email='j.j.molenaar@gmail.com, jchris.fillionr@kitware.com',
