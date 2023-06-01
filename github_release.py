@@ -329,13 +329,20 @@ def get_release(repo_name, tag_name):
     except StopIteration:
         return None
 
-
+retry_count = 0
+max_retry_attempts = 3
 def get_release_info(repo_name, tag_name):
     release = get_release(repo_name, tag_name)
     if release is not None:
         return release
     else:
-        raise Exception('Release with tag_name {0} not found'.format(tag_name))
+        if retry_count < max_retry_attempts:
+            retry_count += 1
+            print('Fetching the release with tag_name {0}. Retry {1} of {2}.'.format(tag_name, retry_count, max_retry_attempts))
+            time.sleep(10)
+            get_release_info(repo_name, tag_name)
+        else: 
+            raise Exception('Release with tag_name {0} not found'.format(tag_name))
 
 
 def _update_release_sha(repo_name, tag_name, new_release_sha, dry_run):
