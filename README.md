@@ -1,4 +1,6 @@
-# ⚠️ This repository is not supported and will be archived before April 4th, 2026.
+# ⚠️ This repository is not supported.
+
+# It will be archived no later than April 4th, 2026.
 
 ---
 
