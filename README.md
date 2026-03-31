@@ -1,3 +1,7 @@
+# ⚠️ This repository is not supported and will be archived before April 4th, 2026.
+
+---
+
 # githubrelease
 
 [![Build Status](https://travis-ci.org/j0057/github-release.svg?branch=master)](https://travis-ci.org/j0057/github-release)
