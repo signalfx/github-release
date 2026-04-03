@@ -1,7 +1,4 @@
-# ⚠️ This repository is not supported.
-
-# It will be archived no later than April 4th, 2026.
-
+# ⚠️ This repository has reached end of support.
 ---
 
 # githubrelease
